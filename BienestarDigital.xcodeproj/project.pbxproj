@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06C923C88B68001C5430 /* AppDelegate.swift */; };
+		7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */; };
+		7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06CD23C88B68001C5430 /* Main.storyboard */; };
+		7FCF06D123C88B6F001C5430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D023C88B6F001C5430 /* Assets.xcassets */; };
+		7FCF06D423C88B6F001C5430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */; };
+		7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */; };
+		7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */; };
+		89A0EBEC23CA4FFD0059F572 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */; };
+		DE13F537FD790A59710B2932 /* Pods_BienestarDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7FCF06C623C88B68001C5430 /* BienestarDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BienestarDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCF06C923C88B68001C5430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
+		7FCF06CE23C88B68001C5430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FCF06D023C88B6F001C5430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FCF06D323C88B6F001C5430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FCF06D523C88B6F001C5430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_ViewController.swift; sourceTree = "<group>"; };
+		7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singup_ViewController.swift; sourceTree = "<group>"; };
+		84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BienestarDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.debug.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.release.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FCF06C323C88B68001C5430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE13F537FD790A59710B2932 /* Pods_BienestarDigital.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FCF06BD23C88B68001C5430 = {
+			isa = PBXGroup;
+			children = (
+				7FCF06C823C88B68001C5430 /* BienestarDigital */,
+				7FCF06C723C88B68001C5430 /* Products */,
+				D951B6E90A00AC52751F797F /* Pods */,
+				BB1AD3FD987F97F2ABC9E976 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7FCF06C723C88B68001C5430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FCF06C623C88B68001C5430 /* BienestarDigital.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FCF06C823C88B68001C5430 /* BienestarDigital */ = {
+			isa = PBXGroup;
+			children = (
+				7FCF06C923C88B68001C5430 /* AppDelegate.swift */,
+				7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */,
+				7FCF06CD23C88B68001C5430 /* Main.storyboard */,
+				89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */,
+				7FCF06D023C88B6F001C5430 /* Assets.xcassets */,
+				7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */,
+				7FCF06D523C88B6F001C5430 /* Info.plist */,
+				7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */,
+				7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */,
+			);
+			path = BienestarDigital;
+			sourceTree = "<group>";
+		};
+		BB1AD3FD987F97F2ABC9E976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D951B6E90A00AC52751F797F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */,
+				EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FCF06C523C88B68001C5430 /* BienestarDigital */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FCF06D823C88B6F001C5430 /* Build configuration list for PBXNativeTarget "BienestarDigital" */;
+			buildPhases = (
+				6711557BB4C92965EDBA34E1 /* [CP] Check Pods Manifest.lock */,
+				7FCF06C223C88B68001C5430 /* Sources */,
+				7FCF06C323C88B68001C5430 /* Frameworks */,
+				7FCF06C423C88B68001C5430 /* Resources */,
+				55C676A789271AEC95425D03 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BienestarDigital;
+			productName = BienestarDigital;
+			productReference = 7FCF06C623C88B68001C5430 /* BienestarDigital.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FCF06BE23C88B68001C5430 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = ivanOdP;
+				TargetAttributes = {
+					7FCF06C523C88B68001C5430 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 7FCF06C123C88B68001C5430 /* Build configuration list for PBXProject "BienestarDigital" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FCF06BD23C88B68001C5430;
+			productRefGroup = 7FCF06C723C88B68001C5430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FCF06C523C88B68001C5430 /* BienestarDigital */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FCF06C423C88B68001C5430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCF06D423C88B6F001C5430 /* LaunchScreen.storyboard in Resources */,
+				7FCF06D123C88B6F001C5430 /* Assets.xcassets in Resources */,
+				7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55C676A789271AEC95425D03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6711557BB4C92965EDBA34E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BienestarDigital-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FCF06C223C88B68001C5430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */,
+				7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */,
+				7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */,
+				7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */,
+				89A0EBEC23CA4FFD0059F572 /* CustomTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7FCF06CD23C88B68001C5430 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FCF06CE23C88B68001C5430 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FCF06D323C88B6F001C5430 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FCF06D623C88B6F001C5430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7FCF06D723C88B6F001C5430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FCF06D923C88B6F001C5430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BienestarDigital/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = u.BienestarDigital;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FCF06DA23C88B6F001C5430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BienestarDigital/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = u.BienestarDigital;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FCF06C123C88B68001C5430 /* Build configuration list for PBXProject "BienestarDigital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCF06D623C88B6F001C5430 /* Debug */,
+				7FCF06D723C88B6F001C5430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FCF06D823C88B6F001C5430 /* Build configuration list for PBXNativeTarget "BienestarDigital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCF06D923C88B6F001C5430 /* Debug */,
+				7FCF06DA23C88B6F001C5430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FCF06BE23C88B68001C5430 /* Project object */;
+}
