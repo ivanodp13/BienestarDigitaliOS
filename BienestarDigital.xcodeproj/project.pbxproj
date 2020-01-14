@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3C5D9D23CC680C00A81555 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */; };
 		7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06C923C88B68001C5430 /* AppDelegate.swift */; };
 		7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */; };
 		7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06CD23C88B68001C5430 /* Main.storyboard */; };
@@ -14,11 +15,12 @@
 		7FCF06D423C88B6F001C5430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */; };
 		7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */; };
 		7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */; };
-		89A0EBEC23CA4FFD0059F572 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */; };
+		7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */; };
 		DE13F537FD790A59710B2932 /* Pods_BienestarDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7FCF06C623C88B68001C5430 /* BienestarDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BienestarDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCF06C923C88B68001C5430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
@@ -28,8 +30,8 @@
 		7FCF06D523C88B6F001C5430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_ViewController.swift; sourceTree = "<group>"; };
 		7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singup_ViewController.swift; sourceTree = "<group>"; };
+		7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePass_ViewController.swift; sourceTree = "<group>"; };
 		84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BienestarDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.debug.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.release.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,12 +72,13 @@
 				7FCF06C923C88B68001C5430 /* AppDelegate.swift */,
 				7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */,
 				7FCF06CD23C88B68001C5430 /* Main.storyboard */,
-				89A0EBEB23CA4FFC0059F572 /* CustomTableViewController.swift */,
+				7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */,
 				7FCF06D023C88B6F001C5430 /* Assets.xcassets */,
 				7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */,
 				7FCF06D523C88B6F001C5430 /* Info.plist */,
 				7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */,
 				7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */,
+				7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */,
 			);
 			path = BienestarDigital;
 			sourceTree = "<group>";
@@ -94,7 +97,6 @@
 				CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */,
 				EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,10 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */,
+				7F3C5D9D23CC680C00A81555 /* CustomTableViewCell.swift in Sources */,
+				7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */,
 				7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */,
 				7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */,
 				7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */,
-				89A0EBEC23CA4FFD0059F572 /* CustomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
