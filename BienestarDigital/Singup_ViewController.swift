@@ -7,6 +7,7 @@ class Singup_ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.warningLabel.isHidden = true
+        sigupButton.layer.cornerRadius = 5
     }
     
 
@@ -14,6 +15,7 @@ class Singup_ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var sigupButton: UIButton!
     
     
     func register(name: String, email: String, password: String) {

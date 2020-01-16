@@ -15,10 +15,12 @@ class RestorePass_ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.WarningLabel.isHidden = true
+        sendEmailButton.layer.cornerRadius = 5
     }
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var WarningLabel: UILabel!
+    @IBOutlet weak var sendEmailButton: UIButton!
     
     func RestorePass(email: String) {
         let url = URL(string: "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/passrestore")

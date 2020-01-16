@@ -16,12 +16,14 @@ class Login_ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.warningLabel.isHidden = true
+        loginButton.layer.cornerRadius = 5
     }
 
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     func logIn(email: String, password: String) {
@@ -37,6 +39,7 @@ class Login_ViewController: UIViewController {
                 if let json = response.result.value as? [String: Any] {
                     let token = json["token"] as! String
                     UserDefaults.standard.set(token, forKey: "token")
+                    self.getAppUseData()
                     self.performSegue(withIdentifier: "LoginSegue", sender: nil)
                     print(UserDefaults.standard.value(forKey: "token") ?? 0)
                 }
@@ -56,6 +59,45 @@ class Login_ViewController: UIViewController {
             self.warningLabel.isHidden = false
         }else{
             logIn(email: emailTextField.text!, password: passTextField.text!)
+        }
+    }
+    
+    func getAppUseData() {
+        let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/showAllAppUseToday"
+        let user_token: String = UserDefaults.standard.value(forKey: "token") as! String
+        
+        let header = ["Authorization" : user_token]
+        
+        Alamofire.request(url, headers: header).responseJSON { response in
+            
+            switch(response.response?.statusCode){
+                
+            case 200:
+                
+                if let json = response.result.value as? [[String: Any]] {
+                    var apps: [App] = []
+                    
+                    for app in json {
+                        apps.append(App(json: app))
+                    }
+                    
+                    for app in apps {
+                        print(app.id)
+                        print(app.name)
+                        print(app.icon)
+                        print(app.use)
+                    }
+                }
+                
+            case 400:
+                print("Error de servidor")
+            default:
+                print("Tas pasao")
+            }
+            
+            /*if let json = response.result.value as? [String: Any] {
+             
+             }*/
         }
     }
 }

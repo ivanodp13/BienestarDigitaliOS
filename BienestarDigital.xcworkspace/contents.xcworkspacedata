@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Volumes/SAMSUNG/IVANODP/2/iOS/BienestarDigital/BienestarDigital/ViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Volumes/SAMSUNG/IVANODP/2/iOS/BienestarDigital/Data.swift">
+   </FileRef>
+   <FileRef
       location = "group:BienestarDigital.xcodeproj">
    </FileRef>
    <FileRef

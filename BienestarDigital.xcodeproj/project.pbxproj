@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F3C5D9D23CC680C00A81555 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */; };
+		7FC2F98223CF02C6001F3D26 /* AppList_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */; };
 		7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06C923C88B68001C5430 /* AppDelegate.swift */; };
 		7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */; };
 		7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06CD23C88B68001C5430 /* Main.storyboard */; };
@@ -16,11 +16,16 @@
 		7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */; };
 		7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */; };
 		7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */; };
+		7FE7C7D223D0954800C19233 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE7C7D123D0954800C19233 /* App.swift */; };
+		8920E0EC23CFA545002F3F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920E0EB23CFA545002F3F5A /* ViewController.swift */; };
+		8920E0EE23CFBF9F002F3F5A /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920E0ED23CFBF9F002F3F5A /* AppTableViewCell.swift */; };
+		89215E6323D0E778006D084A /* EditPassword_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215E6223D0E778006D084A /* EditPassword_ViewController.swift */; };
+		892A818523CE4AAB002A4484 /* User_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A818423CE4AAB002A4484 /* User_ViewController.swift */; };
 		DE13F537FD790A59710B2932 /* Pods_BienestarDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_TableViewController.swift; sourceTree = "<group>"; };
 		7FCF06C623C88B68001C5430 /* BienestarDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BienestarDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCF06C923C88B68001C5430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +36,12 @@
 		7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_ViewController.swift; sourceTree = "<group>"; };
 		7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singup_ViewController.swift; sourceTree = "<group>"; };
 		7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePass_ViewController.swift; sourceTree = "<group>"; };
+		7FE7C7D123D0954800C19233 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		84141AAEAAA50FCA17E27AAD /* Pods_BienestarDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BienestarDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8920E0EB23CFA545002F3F5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = /Volumes/SAMSUNG/IVANODP/2/iOS/BienestarDigital/BienestarDigital/ViewController.swift; sourceTree = "<absolute>"; };
+		8920E0ED23CFBF9F002F3F5A /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		89215E6223D0E778006D084A /* EditPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPassword_ViewController.swift; sourceTree = "<group>"; };
+		892A818423CE4AAB002A4484 /* User_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_ViewController.swift; sourceTree = "<group>"; };
 		CE2675117CEE4798A4F8EDE8 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.debug.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF07939B72010249C8D36DB /* Pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.release.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,16 +79,21 @@
 		7FCF06C823C88B68001C5430 /* BienestarDigital */ = {
 			isa = PBXGroup;
 			children = (
+				8920E0EB23CFA545002F3F5A /* ViewController.swift */,
 				7FCF06C923C88B68001C5430 /* AppDelegate.swift */,
 				7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */,
 				7FCF06CD23C88B68001C5430 /* Main.storyboard */,
+				7FE7C7D123D0954800C19233 /* App.swift */,
+				8920E0ED23CFBF9F002F3F5A /* AppTableViewCell.swift */,
+				7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */,
+				892A818423CE4AAB002A4484 /* User_ViewController.swift */,
 				7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */,
 				7FCF06D023C88B6F001C5430 /* Assets.xcassets */,
 				7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */,
 				7FCF06D523C88B6F001C5430 /* Info.plist */,
 				7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */,
 				7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */,
-				7F3C5D9C23CC680C00A81555 /* CustomTableViewCell.swift */,
+				89215E6223D0E778006D084A /* EditPassword_ViewController.swift */,
 			);
 			path = BienestarDigital;
 			sourceTree = "<group>";
@@ -216,11 +231,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */,
-				7F3C5D9D23CC680C00A81555 /* CustomTableViewCell.swift in Sources */,
 				7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */,
+				8920E0EC23CFA545002F3F5A /* ViewController.swift in Sources */,
+				7FE7C7D223D0954800C19233 /* App.swift in Sources */,
 				7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */,
+				892A818523CE4AAB002A4484 /* User_ViewController.swift in Sources */,
+				8920E0EE23CFBF9F002F3F5A /* AppTableViewCell.swift in Sources */,
+				7FC2F98223CF02C6001F3D26 /* AppList_TableViewController.swift in Sources */,
 				7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */,
 				7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */,
+				89215E6323D0E778006D084A /* EditPassword_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
