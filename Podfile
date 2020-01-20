@@ -6,6 +6,7 @@ abstract_target 'all_pods' do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'SwiftyJSON'
+    pod 'Charts'
 
 target 'BienestarDigital' do
 #    all_pods

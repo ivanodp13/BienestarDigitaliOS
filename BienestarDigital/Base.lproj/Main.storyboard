@@ -421,6 +421,9 @@
                                 <state key="normal" title="Añadir restricción">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="AddRestrictionFunc:" destination="9Yk-VX-kPZ" eventType="touchUpInside" id="3AM-2P-yCT"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FI1-5P-MTj">
                                 <rect key="frame" x="0.0" y="258" width="414" height="273"/>
@@ -429,15 +432,33 @@
                                     <segue destination="4Do-UM-ELn" kind="embed" id="fRk-Jo-IvF"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1t-Wi-cw1">
+                                <rect key="frame" x="80" y="148" width="271" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Primero debes establecer un tiempo total o un rango" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N07-Hb-3Ip">
+                                <rect key="frame" x="45" y="765" width="340" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.1034853199" blue="0.057617128560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t14-Rh-4R9"/>
                     </view>
                     <connections>
                         <outlet property="AddRestrictionButton" destination="BSv-D6-wQs" id="99H-Tg-ngX"/>
+                        <outlet property="appNameLabel" destination="W1t-Wi-cw1" id="cbN-Ew-Cfr"/>
+                        <outlet property="warningLabel" destination="N07-Hb-3Ip" id="Ywh-hb-GJd"/>
+                        <segue destination="3W2-0v-yk2" kind="unwind" identifier="unwindToAppDetail" unwindAction="unwidToAppDetail:" id="JhP-lH-Kzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjV-5k-QkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3W2-0v-yk2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3457.971014492754" y="-1185.2678571428571"/>
         </scene>
@@ -490,10 +511,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="02:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ck9-un-MhH">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ck9-un-MhH">
                                                     <rect key="frame" x="334" y="13" width="70" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -715,11 +736,11 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="BYUse" destination="Lp0-jD-5xA" id="wlQ-tj-U10"/>
+                        <outlet property="byUseLabel" destination="Lp0-jD-5xA" id="Ers-Mc-2ve"/>
                         <outlet property="detailsTable" destination="UT9-KN-XSy" id="3g3-lg-yTT"/>
-                        <outlet property="todayUse" destination="neM-ou-CPs" id="cZh-K3-pis"/>
-                        <outlet property="totalUse" destination="iU1-wn-SsU" id="1N7-nM-jRY"/>
-                        <outlet property="yesterdayUse" destination="x1X-df-mSM" id="ZvW-QT-ZYI"/>
+                        <outlet property="todayUseLabel" destination="neM-ou-CPs" id="WQV-Is-8p3"/>
+                        <outlet property="totalUseLabel" destination="iU1-wn-SsU" id="oV4-aU-spq"/>
+                        <outlet property="yesterdayUseLabel" destination="x1X-df-mSM" id="xqo-uT-Rtg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khy-nC-1bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -817,14 +838,27 @@
                     <view key="view" contentMode="scaleToFill" id="lwj-8R-IRL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="620-bl-jGM">
+                                <rect key="frame" x="0.0" y="194" width="414" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="620-bl-jGM" firstAttribute="trailing" secondItem="EQB-6U-bL3" secondAttribute="trailing" id="9bq-BZ-0Zq"/>
+                            <constraint firstItem="620-bl-jGM" firstAttribute="centerY" secondItem="lwj-8R-IRL" secondAttribute="centerY" id="9wX-ME-m6Z"/>
+                            <constraint firstItem="620-bl-jGM" firstAttribute="centerX" secondItem="lwj-8R-IRL" secondAttribute="centerX" id="TAI-Y4-N8M"/>
+                            <constraint firstItem="620-bl-jGM" firstAttribute="leading" secondItem="EQB-6U-bL3" secondAttribute="leading" id="nLs-Ye-hKU"/>
+                            <constraint firstItem="620-bl-jGM" firstAttribute="top" secondItem="EQB-6U-bL3" secondAttribute="top" constant="150" id="rjU-Y0-65T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EQB-6U-bL3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Estadísticas" image="bar_chart" selectedImage="bar_chart" id="Pbo-Zi-Sk7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNF-bd-oHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-468"/>
+            <point key="canvasLocation" x="886.95652173913049" y="-468.08035714285711"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="vpK-vK-w60">

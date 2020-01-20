@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var useArray: Array<String> = []
     var iconURLArray: Array<String> = []
     
-     var detailsTableViewController : UIViewController?
+    var detailsTableViewController : UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,7 +23,7 @@ class AppInfo_ViewController: UIViewController {
         appName.text = global_app_name
         let url = URL(string: global_app_icon)
         appIcon.af_setImage(withURL: url!)
-        downloadDataFromAPI()
+        //downloadDataFromAPI()
         
         
         
@@ -40,34 +40,5 @@ class AppInfo_ViewController: UIViewController {
     var totalUseString: String = ""
     var idString: String = ""
     
-    func downloadDataFromAPI(){
-        
-        let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/appUseDetails/"+global_app_name
-        let user_token: String = UserDefaults.standard.value(forKey: "token") as! String
-        let header = ["Authorization" : user_token]
-        
-        Alamofire.request(url, headers: header) .responseJSON { response in
-            if let JSON = response.result.value{
-                self.jsonArray = JSON as? NSArray
-                for item in self.jsonArray! as! [NSDictionary]{
-                    let todayUse = item["todayUse"] as? String
-                    let yesterdayUse = item["yesterdayUse"] as? String
-                    let byUse = item["BYUse"] as? String
-                    let totalUse = item["TotalUse"] as? String
-                    let id = item["id"] as? String
-                    self.todayUseString = todayUse ?? "Sin uso"
-                    self.yesterdayUseString = yesterdayUse ?? "Sin uso"
-                    self.byUseString = byUse ?? "Sin uso"
-                    self.totalUseString = totalUse ?? "Sin uso"
-                    self.idString = id ?? ""
-                    
-                    global_todayUseString = self.todayUseString
-                    global_yesterdayUseString = self.yesterdayUseString
-                    global_byUseString = self.byUseString
-                    global_totalUseString = self.totalUseString
-                    global_id = self.idString
-                }
-            }
-        }
-    }
+@IBAction func unwidToAppDetail(_ sender: UIStoryboardSegue) {}
 }
