@@ -25,6 +25,8 @@ class Restriction_Table_ViewController: UITableViewController {
         let date = dateFormatter.date(from: "00:00")
         datePicker?.date = date!
         
+        let firstDateChanged = UITapGestureRecognizer(target: self, action: #selector(Restriction_Table_ViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(firstDateChanged)
         
         maxTimeTextField.inputView = datePicker
         
@@ -40,6 +42,8 @@ class Restriction_Table_ViewController: UITableViewController {
         let Seconddate = dateFormatter.date(from: "00:00")
         secondDatePicker?.date = date!
         
+        let secondDateChanged = UITapGestureRecognizer(target: self, action: #selector(Restriction_Table_ViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(secondDateChanged)
         
         fromTimeTextField.inputView = secondDatePicker
         
@@ -56,7 +60,13 @@ class Restriction_Table_ViewController: UITableViewController {
         let Thirddate = dateFormatter.date(from: "00:00")
         thirdDatePicker?.date = date!
         
+        
+        
+        let thirdDateChanged = UITapGestureRecognizer(target: self, action: #selector(Restriction_Table_ViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(thirdDateChanged)
+        
         toTimeTextField.inputView = thirdDatePicker
+        
         
         
     }
@@ -81,6 +91,9 @@ class Restriction_Table_ViewController: UITableViewController {
     @IBOutlet weak var section2Cell2: UITableViewCell!
     @IBOutlet weak var section2Cell3: UITableViewCell!
     
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+        view.endEditing(true)
+    }
     
     @IBAction func maxTimeSwitchFunc(_ sender: Any) {
         if maxTimeSwitch.isOn{
@@ -115,7 +128,7 @@ class Restriction_Table_ViewController: UITableViewController {
         dateFormatter.dateFormat = "HH:mm"
         maxTimeTextField.text = dateFormatter.string(from: datePicker.date)
         global_maxTimeLabel = maxTimeTextField.text!
-        view.endEditing(true)
+        //view.endEditing(true)
     }
     
     @objc func FromtimeChanged(datePicker: UIDatePicker){
@@ -123,7 +136,7 @@ class Restriction_Table_ViewController: UITableViewController {
         dateFormatter.dateFormat = "HH:mm"
         fromTimeTextField.text = dateFormatter.string(from: datePicker.date)
         global_fromTimeLabel = fromTimeTextField.text!
-        view.endEditing(true)
+        //view.endEditing(true)
     }
     
     @objc func TotimeChanged(datePicker: UIDatePicker){
@@ -131,7 +144,7 @@ class Restriction_Table_ViewController: UITableViewController {
         dateFormatter.dateFormat = "HH:mm"
         toTimeTextField.text = dateFormatter.string(from: datePicker.date)
         global_toTimeLabel = toTimeTextField.text!
-        view.endEditing(true)
+        //view.endEditing(true)
     }
     
 }

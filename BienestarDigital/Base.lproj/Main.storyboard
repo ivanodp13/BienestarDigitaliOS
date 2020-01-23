@@ -834,27 +834,38 @@
         <!--Estadísticas-->
         <scene sceneID="BhS-YM-mYg">
             <objects>
-                <viewController id="MO0-n0-uqF" sceneMemberID="viewController">
+                <viewController id="MO0-n0-uqF" customClass="Chart_ViewController" customModule="BienestarDigital" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lwj-8R-IRL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="620-bl-jGM">
-                                <rect key="frame" x="0.0" y="194" width="414" height="508"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-DT-3uY" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="130" width="414" height="597"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-PM-CHa">
+                                <rect key="frame" x="57" y="66" width="300" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Día"/>
+                                    <segment title="Semana"/>
+                                    <segment title="Mes"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="MO0-n0-uqF" eventType="valueChanged" id="9Qn-xF-nnf"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="620-bl-jGM" firstAttribute="trailing" secondItem="EQB-6U-bL3" secondAttribute="trailing" id="9bq-BZ-0Zq"/>
-                            <constraint firstItem="620-bl-jGM" firstAttribute="centerY" secondItem="lwj-8R-IRL" secondAttribute="centerY" id="9wX-ME-m6Z"/>
-                            <constraint firstItem="620-bl-jGM" firstAttribute="centerX" secondItem="lwj-8R-IRL" secondAttribute="centerX" id="TAI-Y4-N8M"/>
-                            <constraint firstItem="620-bl-jGM" firstAttribute="leading" secondItem="EQB-6U-bL3" secondAttribute="leading" id="nLs-Ye-hKU"/>
-                            <constraint firstItem="620-bl-jGM" firstAttribute="top" secondItem="EQB-6U-bL3" secondAttribute="top" constant="150" id="rjU-Y0-65T"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EQB-6U-bL3"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Estadísticas" image="bar_chart" selectedImage="bar_chart" id="Pbo-Zi-Sk7"/>
+                    <connections>
+                        <outlet property="barChartView" destination="gD7-DT-3uY" id="F7d-pn-JME"/>
+                        <outlet property="segmentedControl" destination="kZz-PM-CHa" id="8xN-cH-pYe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNF-bd-oHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

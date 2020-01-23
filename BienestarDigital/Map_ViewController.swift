@@ -9,25 +9,54 @@
 import UIKit
 import MapKit
 import Alamofire
+import CoreLocation
 
 
-class Location {
-    var latitude: String?
-    var longitude: String?
-}
-
-class Map_ViewController: UIViewController {
+class Map_ViewController: UIViewController, CLLocationManagerDelegate {
     
     var jsonArray: NSArray?
     var latitudeArray: Array<String> = []
     var longitudeArray: Array<String> = []
+    
     @IBOutlet weak var mapView: MKMapView!
+     let locationManager = CLLocationManager()
+    var currentCoordinate: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadDataFromAPI()
+        
+        //let localizacion = CLLocationCoordinate2DMake
+        //print(localizacion)
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.startUpdatingLocation()
+        }
+        
+        mapView.showsUserLocation = true
+        mapView.showsCompass = true
+        mapView.showsScale = true
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        //print("locations = \(locValue.latitude) \(locValue.longitude)")
+        let regionRadius: CLLocationDistance = 4000.0
+        let region = MKCoordinateRegion(center: currentLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        
+        mapView.setRegion(region, animated: true)
+    }
     
     
     
@@ -53,8 +82,6 @@ class Map_ViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
     
     func createAnnotations(/*locations: [[String: Any]]*/){
@@ -65,17 +92,17 @@ class Map_ViewController: UIViewController {
         
         
         if(latitudes == longitudes){
-            locations = latitudes
+            locations = latitudes-1
         }
-        var i = 0
-        
-        print(latitudeArray[i])
-        
-        let annotation2 = MKPointAnnotation()
-        annotation2.title = "prueba"
-        annotation2.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitudeArray[1]) as! CLLocationDegrees,
-                                                           longitude: CLLocationDegrees(longitudeArray[1]) as! CLLocationDegrees)
-        self.mapView.addAnnotation(annotation2)
+        for locations in 0...locations{
+            let locationsNumber = String(locations+1)
+            let annotation = MKPointAnnotation()
+            annotation.title = "Localización "+locationsNumber
+            annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitudeArray[locations]) as! CLLocationDegrees, longitude: CLLocationDegrees(longitudeArray[locations]) as! CLLocationDegrees)
+            self.mapView.addAnnotation(annotation)
+        }
         
     }
 }
+
+
