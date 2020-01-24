@@ -14,7 +14,6 @@
 		7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06CD23C88B68001C5430 /* Main.storyboard */; };
 		7FCF06D123C88B6F001C5430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D023C88B6F001C5430 /* Assets.xcassets */; };
 		7FCF06D423C88B6F001C5430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */; };
-		7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */; };
 		7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */; };
 		7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */; };
 		7FE7C7D223D0954800C19233 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE7C7D123D0954800C19233 /* App.swift */; };
@@ -42,7 +41,6 @@
 		7FCF06D023C88B6F001C5430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FCF06D323C88B6F001C5430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FCF06D523C88B6F001C5430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_ViewController.swift; sourceTree = "<group>"; };
 		7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singup_ViewController.swift; sourceTree = "<group>"; };
 		7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePass_ViewController.swift; sourceTree = "<group>"; };
 		7FE7C7D123D0954800C19233 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				7FCF06D023C88B6F001C5430 /* Assets.xcassets */,
 				7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */,
 				7FCF06D523C88B6F001C5430 /* Info.plist */,
-				7FCF06DB23C88BA1001C5430 /* AppList_ViewController.swift */,
 				7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */,
 				89215E6223D0E778006D084A /* EditPassword_ViewController.swift */,
 				7FFD500223D1B5A000EC3EA4 /* AppInfo_ViewController.swift */,
@@ -257,7 +254,6 @@
 				8920E0EC23CFA545002F3F5A /* ViewController.swift in Sources */,
 				892B1DF823D3886900BD1260 /* AppInfo_Table_ViewController.swift in Sources */,
 				7FE7C7D223D0954800C19233 /* App.swift in Sources */,
-				7FCF06DC23C88BA1001C5430 /* AppList_ViewController.swift in Sources */,
 				7F0A72FF23D86235005DFC7E /* Chart_ViewController.swift in Sources */,
 				892A818523CE4AAB002A4484 /* User_ViewController.swift in Sources */,
 				8920E0EE23CFBF9F002F3F5A /* AppTableViewCell.swift in Sources */,

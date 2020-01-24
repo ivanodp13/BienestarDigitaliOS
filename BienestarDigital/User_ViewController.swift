@@ -14,6 +14,8 @@ class User_ViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var useremailLabel: UILabel!
     
+    let barButton = UIBarButtonItem()
+    
     func getUserData() {
         let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/showUserData"
         let user_token: String = UserDefaults.standard.value(forKey: "token") as! String
@@ -30,5 +32,20 @@ class User_ViewController: UIViewController {
         }
     }
     
+    @IBAction func function(_ sender: Any) {
+        let token = UserDefaults.standard
+        token.removeObject(forKey: "token")
+        token.synchronize()
+        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "singOffSegue", sender: nil)
+    }
+   
+    @objc func barButtonAction() {
+        print("Button pressed")
+    }
+
+    
+    
     @IBAction func unwidToUser(_ sender: UIStoryboardSegue) {}
 }
+

@@ -91,7 +91,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="¿Ya tienes cuenta? Inicia sesión"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="4ar-oG-r3B"/>
+                                    <action selector="loginfunc:" destination="Lfp-b1-ERI" eventType="touchUpInside" id="bWr-hg-T4I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +121,7 @@
                         <outlet property="usernameTextField" destination="OKq-4A-1i9" id="QGH-dt-VYi"/>
                         <outlet property="warningLabel" destination="q0d-wf-mEx" id="xKf-wI-TeX"/>
                         <segue destination="P16-O7-al3" kind="show" identifier="RegisterSegue" id="cut-0I-XLI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="registerToLogin" id="AXb-Ic-zti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="750-Yj-D47" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +199,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="¿Ya tienes cuenta? Inicia sesión"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="vbt-TO-6E5"/>
+                                    <action selector="RestorePassFunction:" destination="nZK-xA-7QI" eventType="touchUpInside" id="84b-WR-Jv5"/>
+                                    <action selector="loginfunc:" destination="nZK-xA-7QI" eventType="touchUpInside" id="LEp-78-h9h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -224,6 +226,7 @@
                         <outlet property="emailTextField" destination="TKP-8C-wN8" id="lvP-tz-aHP"/>
                         <outlet property="sendEmailButton" destination="s3V-wc-4DT" id="YTJ-mA-7Zi"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PassRestoreSegue" id="z70-67-PCo"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginFromRestore" id="UDJ-ld-ltU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Di5-Zd-2YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,7 +284,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="¿No tienes cuenta? Regístrate"/>
                                 <connections>
-                                    <segue destination="Lfp-b1-ERI" kind="showDetail" id="F8X-MQ-GKe"/>
+                                    <action selector="registerfunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vc4-Ug-wNm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-pm-6R2">
@@ -293,7 +296,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Recuperar contraseña"/>
                                 <connections>
-                                    <segue destination="nZK-xA-7QI" kind="showDetail" id="edc-tn-OY2"/>
+                                    <action selector="passRecovery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUq-2a-fwL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email o contraseña incorrecta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwj-4m-jT2">
@@ -339,6 +342,8 @@
                         <outlet property="passTextField" destination="2im-Zg-edL" id="8hD-h1-E27"/>
                         <outlet property="warningLabel" destination="cwj-4m-jT2" id="bFf-SZ-zVH"/>
                         <segue destination="P16-O7-al3" kind="show" identifier="LoginSegue" id="u2X-XH-xAD"/>
+                        <segue destination="Lfp-b1-ERI" kind="show" identifier="loginToRegisterSegue" id="gaC-yS-dRT"/>
+                        <segue destination="nZK-xA-7QI" kind="show" identifier="loginToPassRecovery" id="vPf-u1-nLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -908,11 +913,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7mx-om-48V"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Perfil" id="Qq4-FX-EsF"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="Qq4-FX-EsF">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TQ1-x3-mWV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cgz-qg-L80">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="function:" destination="cBv-IN-d66" eventType="touchUpInside" id="Wbt-uw-xBi"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="circularImage" destination="5He-hF-FVh" id="tbj-Sc-0WC"/>
                         <outlet property="useremailLabel" destination="eSf-8n-WSV" id="4Iw-od-AJX"/>
                         <outlet property="usernameLabel" destination="Ccr-yR-gvO" id="XyA-86-QqG"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="singOffSegue" id="2gH-Jr-Gjp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJh-TZ-wZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1205,7 +1222,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u2X-XH-xAD"/>
-        <segue reference="vbt-TO-6E5"/>
+        <segue reference="cut-0I-XLI"/>
+        <segue reference="UDJ-ld-ltU"/>
     </inferredMetricsTieBreakers>
 </document>

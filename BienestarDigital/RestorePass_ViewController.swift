@@ -48,5 +48,9 @@ class RestorePass_ViewController: UIViewController {
         RestorePass(email: emailTextField.text!)
     }
     
+    @IBAction func loginfunc(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "loginFromRestore", sender: nil)
+    }
 }
 

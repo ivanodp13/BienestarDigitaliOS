@@ -42,7 +42,7 @@ class Login_ViewController: UIViewController {
                     let token = json["token"] as! String
                     UserDefaults.standard.set(token, forKey: "token")
                     self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-                    print(UserDefaults.standard.value(forKey: "token") ?? 0)
+                    //print(UserDefaults.standard.value(forKey: "token") ?? 0)
                 }
             case 401:
                 if let json = response.result.value as? [String: Any] {
@@ -62,7 +62,15 @@ class Login_ViewController: UIViewController {
             logIn(email: emailTextField.text!, password: passTextField.text!)
         }
     }
+    @IBAction func registerfunc(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "loginToRegisterSegue", sender: nil)
+    }
     
+    @IBAction func passRecovery(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "loginToPassRecovery", sender: nil)
+    }
 }
 
 

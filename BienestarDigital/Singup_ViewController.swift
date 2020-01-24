@@ -54,4 +54,10 @@ class Singup_ViewController: UIViewController {
             register(name: usernameTextField.text!, email: emailTextField.text!, password: passTextField.text!)
         }
     }
+    
+    @IBAction func loginfunc(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "registerToLogin", sender: nil)
+    }
+    
 }
