@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F0A72FF23D86235005DFC7E /* Chart_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A72FE23D86235005DFC7E /* Chart_ViewController.swift */; };
-		7FC2F98223CF02C6001F3D26 /* AppList_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */; };
 		7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06C923C88B68001C5430 /* AppDelegate.swift */; };
 		7FCF06CC23C88B68001C5430 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */; };
 		7FCF06CF23C88B68001C5430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06CD23C88B68001C5430 /* Main.storyboard */; };
@@ -16,7 +15,6 @@
 		7FCF06D423C88B6F001C5430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06D223C88B6F001C5430 /* LaunchScreen.storyboard */; };
 		7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */; };
 		7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */; };
-		7FE7C7D223D0954800C19233 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE7C7D123D0954800C19233 /* App.swift */; };
 		7FFD500323D1B5A000EC3EA4 /* AppInfo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD500223D1B5A000EC3EA4 /* AppInfo_ViewController.swift */; };
 		7FFD500523D1C6CE00EC3EA4 /* NewRestriction_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD500423D1C6CE00EC3EA4 /* NewRestriction_ViewController.swift */; };
 		8920E0EC23CFA545002F3F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920E0EB23CFA545002F3F5A /* ViewController.swift */; };
@@ -33,7 +31,6 @@
 		10CE0840C15FAABA3BF93C18 /* Pods-all_pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all_pods-BienestarDigital.debug.xcconfig"; path = "Target Support Files/Pods-all_pods-BienestarDigital/Pods-all_pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
 		2FFABF403B12F74C52F40333 /* Pods-all_pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all_pods-BienestarDigital.release.xcconfig"; path = "Target Support Files/Pods-all_pods-BienestarDigital/Pods-all_pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
 		7F0A72FE23D86235005DFC7E /* Chart_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart_ViewController.swift; sourceTree = "<group>"; };
-		7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList_TableViewController.swift; sourceTree = "<group>"; };
 		7FCF06C623C88B68001C5430 /* BienestarDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BienestarDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCF06C923C88B68001C5430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCF06CB23C88B68001C5430 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		7FCF06D523C88B6F001C5430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FCF06DD23C8998E001C5430 /* Singup_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singup_ViewController.swift; sourceTree = "<group>"; };
 		7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePass_ViewController.swift; sourceTree = "<group>"; };
-		7FE7C7D123D0954800C19233 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		7FFD500223D1B5A000EC3EA4 /* AppInfo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo_ViewController.swift; sourceTree = "<group>"; };
 		7FFD500423D1C6CE00EC3EA4 /* NewRestriction_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestriction_ViewController.swift; sourceTree = "<group>"; };
 		8920E0EB23CFA545002F3F5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = /Volumes/SAMSUNG/IVANODP/2/iOS/BienestarDigital/BienestarDigital/ViewController.swift; sourceTree = "<absolute>"; };
@@ -97,9 +93,7 @@
 				7FCF06CD23C88B68001C5430 /* Main.storyboard */,
 				89FE70C523D4DE0E000E5EE0 /* Restriction_Table_ViewController.swift */,
 				892F85F623D3BC49007202F3 /* Map_ViewController.swift */,
-				7FE7C7D123D0954800C19233 /* App.swift */,
 				8920E0ED23CFBF9F002F3F5A /* AppTableViewCell.swift */,
-				7FC2F98123CF02C6001F3D26 /* AppList_TableViewController.swift */,
 				892A818423CE4AAB002A4484 /* User_ViewController.swift */,
 				892B1DF723D3886900BD1260 /* AppInfo_Table_ViewController.swift */,
 				7FD9617A23CDD4BC00060B74 /* RestorePass_ViewController.swift */,
@@ -253,11 +247,9 @@
 				7FD9617B23CDD4BC00060B74 /* RestorePass_ViewController.swift in Sources */,
 				8920E0EC23CFA545002F3F5A /* ViewController.swift in Sources */,
 				892B1DF823D3886900BD1260 /* AppInfo_Table_ViewController.swift in Sources */,
-				7FE7C7D223D0954800C19233 /* App.swift in Sources */,
 				7F0A72FF23D86235005DFC7E /* Chart_ViewController.swift in Sources */,
 				892A818523CE4AAB002A4484 /* User_ViewController.swift in Sources */,
 				8920E0EE23CFBF9F002F3F5A /* AppTableViewCell.swift in Sources */,
-				7FC2F98223CF02C6001F3D26 /* AppList_TableViewController.swift in Sources */,
 				7FCF06DE23C8998E001C5430 /* Singup_ViewController.swift in Sources */,
 				7FCF06CA23C88B68001C5430 /* AppDelegate.swift in Sources */,
 				7FFD500523D1C6CE00EC3EA4 /* NewRestriction_ViewController.swift in Sources */,

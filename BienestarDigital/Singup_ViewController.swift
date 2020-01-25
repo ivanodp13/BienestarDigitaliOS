@@ -31,8 +31,9 @@ class Singup_ViewController: UIViewController {
                 if let json = response.result.value as? [String: Any] {
                     let token = json["token"] as! String
                     UserDefaults.standard.set(token, forKey: "token")
+                    self.dismiss(animated: true, completion: nil)
                     self.performSegue(withIdentifier: "RegisterSegue", sender: nil)
-                    print(UserDefaults.standard.value(forKey: "token") ?? 0)
+                    //print(UserDefaults.standard.value(forKey: "token") ?? 0)
                 }
             case 401:
                 if let json = response.result.value as? [String: Any] {

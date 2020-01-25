@@ -35,6 +35,7 @@ class User_ViewController: UIViewController {
     @IBAction func function(_ sender: Any) {
         let token = UserDefaults.standard
         token.removeObject(forKey: "token")
+        UserDefaults.standard.set(false, forKey: "loggedIn")
         token.synchronize()
         self.dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "singOffSegue", sender: nil)

@@ -20,6 +20,16 @@ class Login_ViewController: UIViewController {
         self.emailTextField.text = "ivanobejo@hotmail.es"
         self.passTextField.text = "123"
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "loggedIn") == true {
+            //self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            print ("es true")
+        }
+    }
 
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -41,6 +51,8 @@ class Login_ViewController: UIViewController {
                 if let json = response.result.value as? [String: Any] {
                     let token = json["token"] as! String
                     UserDefaults.standard.set(token, forKey: "token")
+                    UserDefaults.standard.set(true, forKey: "loggedIn")
+                    self.dismiss(animated: true, completion: nil)
                     self.performSegue(withIdentifier: "LoginSegue", sender: nil)
                     //print(UserDefaults.standard.value(forKey: "token") ?? 0)
                 }
