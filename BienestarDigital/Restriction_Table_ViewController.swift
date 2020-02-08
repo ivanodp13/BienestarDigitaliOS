@@ -91,10 +91,14 @@ class Restriction_Table_ViewController: UITableViewController {
     @IBOutlet weak var section2Cell2: UITableViewCell!
     @IBOutlet weak var section2Cell3: UITableViewCell!
     
+    
+    /// Al tocar fuera del Picker se cerrará.
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)
     }
     
+    
+    /// Switch que muestra el campo de máximo tiempo de uso.
     @IBAction func maxTimeSwitchFunc(_ sender: Any) {
         if maxTimeSwitch.isOn{
             self.section1Cell2.isHidden=false
@@ -107,6 +111,8 @@ class Restriction_Table_ViewController: UITableViewController {
         }
             
     }
+    
+    /// Switch que muestra el campo de rango de uso.
     @IBAction func fromToTimeSwitchFunc(_ sender: Any) {
         if fromToTimeSwitch.isOn{
             global_toTimeLabel = toTimeTextField.text!
@@ -123,6 +129,7 @@ class Restriction_Table_ViewController: UITableViewController {
         }
     }
     
+    /// Obtiene el valor del Picker de tiempo máximo.
     @objc func MaxtimeChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -131,6 +138,8 @@ class Restriction_Table_ViewController: UITableViewController {
         //view.endEditing(true)
     }
     
+    
+    /// Obtiene el valor del Picker de tiempo inicial.
     @objc func FromtimeChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -139,6 +148,8 @@ class Restriction_Table_ViewController: UITableViewController {
         //view.endEditing(true)
     }
     
+    
+    /// Obtiene el valor del Picker de tiempo final.
     @objc func TotimeChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"

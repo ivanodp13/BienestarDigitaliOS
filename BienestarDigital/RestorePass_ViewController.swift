@@ -22,6 +22,10 @@ class RestorePass_ViewController: UIViewController {
     @IBOutlet weak var WarningLabel: UILabel!
     @IBOutlet weak var sendEmailButton: UIButton!
     
+    
+    /// Petición para recuperar contraseña mediante email.
+    ///
+    /// - Parameter email: email del usuario al que se enviará la nueva contraseña.
     func RestorePass(email: String) {
         let url = URL(string: "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/passrestore")
         
@@ -44,10 +48,12 @@ class RestorePass_ViewController: UIViewController {
         }
     }
     
+    /// Email del usuario que quiere recuperar la contraseña.
     @IBAction func RestorePassFunction(_ sender: Any) {
         RestorePass(email: emailTextField.text!)
     }
     
+    /// Botón para volver a la vista de login.
     @IBAction func loginfunc(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "loginFromRestore", sender: nil)

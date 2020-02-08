@@ -29,6 +29,7 @@ class AppInfo_Table_ViewController: UITableViewController {
     var totalUseString: String = ""
     var idString: String = ""
     
+    /// Petición que devulve los datos de uso de la app en dias anteriores. Una vez recibidos estos datos, rellena los campos de la tabla.
     func downloadDataFromAPI(){
         
         let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/appUseDetails/"+global_app_name

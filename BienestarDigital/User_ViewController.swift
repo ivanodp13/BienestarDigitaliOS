@@ -16,6 +16,7 @@ class User_ViewController: UIViewController {
     
     let barButton = UIBarButtonItem()
     
+    /// Petición para obetner la información de usuario.
     func getUserData() {
         let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/showUserData"
         let user_token: String = UserDefaults.standard.value(forKey: "token") as! String
@@ -32,6 +33,7 @@ class User_ViewController: UIViewController {
         }
     }
     
+    /// Cierra sesión eliminando el token del usuario y ejecuta un Segue que lleva a la vista de login.
     @IBAction func function(_ sender: Any) {
         let token = UserDefaults.standard
         token.removeObject(forKey: "token")
@@ -47,6 +49,7 @@ class User_ViewController: UIViewController {
 
     
     
+    /// Unwind para volver a la vista seleccionada desde el Navigation Controller.
     @IBAction func unwidToUser(_ sender: UIStoryboardSegue) {}
 }
 

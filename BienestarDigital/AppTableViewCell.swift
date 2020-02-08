@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Celda personalizada de la lista de apps
 class AppTableViewCell: UITableViewCell {
     
     @IBOutlet weak var appIcon: UIImageView!

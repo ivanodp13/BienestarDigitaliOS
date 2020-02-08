@@ -26,7 +26,7 @@ class Login_ViewController: UIViewController {
         
         if UserDefaults.standard.bool(forKey: "loggedIn") == true {
             //self.dismiss(animated: true, completion: nil)
-            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            self.performSegue(withIdentifier: "autoLoginSegue", sender: nil)
             print ("es true")
         }
     }
@@ -38,6 +38,11 @@ class Login_ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     
+    /// Petición al servidor para que el usuario inicie sesión. Una vez que el usuario y contraseña son correctos, se guarda el token del usuario en el UsersDefault.
+    ///
+    /// - Parameters:
+    ///   - email: Email del usuario
+    ///   - password: Contraseña del usuario
     func logIn(email: String, password: String) {
         let url = URL(string: "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/login")
          
@@ -67,6 +72,8 @@ class Login_ViewController: UIViewController {
             }
         }
     }
+    
+    /// Función que se ejecuta al pulsar el botón de login. Hace la llamada al servidor.
     @IBAction func loginFunc(_ sender: Any) {
         if(emailTextField.text?.isEmpty ?? true || passTextField.text?.isEmpty ?? true){
             self.warningLabel.isHidden = false
@@ -74,11 +81,15 @@ class Login_ViewController: UIViewController {
             logIn(email: emailTextField.text!, password: passTextField.text!)
         }
     }
+    
+    /// Función que se ejecuta al pulsar el botón de registrarse. Ejecuta un segue que lleva a la vista de registro.
     @IBAction func registerfunc(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "loginToRegisterSegue", sender: nil)
     }
     
+    
+    /// Función que se ejecuta al pulsar el botón de recuperar contraseña. Ejecuta un segue que lleva a la vista de recuperación de contraseña.
     @IBAction func passRecovery(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "loginToPassRecovery", sender: nil)

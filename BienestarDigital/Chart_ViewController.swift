@@ -40,6 +40,7 @@ class Chart_ViewController: UIViewController {
             useArray = []
             removeLimits()
             downloadDataFromAPI(url: url)
+            break
         default:
             break
         }
@@ -66,6 +67,11 @@ class Chart_ViewController: UIViewController {
     var avgMark = ChartLimitLine()
     
     
+    /// Función que crea la gráfica de barras
+    ///
+    /// - Parameters:
+    ///   - dataPoints: Datos de tiempo de uso
+    ///   - values: Nombre de las apps
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "Se necesitan datos para mostrar en el gráfico"
         var dataEntries = [BarChartDataEntry]()
@@ -98,6 +104,7 @@ class Chart_ViewController: UIViewController {
         
     }
     
+    /// Elimina los límites de la gráfica anterior.
     func removeLimits(){
         barChartView.rightAxis.removeLimitLine(self.avgMark)
     }

@@ -27,6 +27,12 @@ class NewRestriction_ViewController: UIViewController {
         }
     }
     
+    /// Petición para crear una nueva restricción.
+    ///
+    /// - Parameters:
+    ///   - maxTime: Tiempo máximo de uso.
+    ///   - fromTime: Tiempo inicial de uso.
+    ///   - toTime: Tiempo final de uso.
     func addRestriction(maxTime: String, fromTime: String, toTime: String) {
         let url = URL(string: "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/restrictions/"+global_app_id)
         

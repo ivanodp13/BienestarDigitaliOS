@@ -24,6 +24,12 @@ class EditPassword_ViewController: UIViewController {
     @IBOutlet weak var newPassVerify: UITextField!
     @IBOutlet weak var WarningLabel: UILabel!
     
+    /// Petición para ediatar la contraseña del usuario
+    ///
+    /// - Parameters:
+    ///   - currentPassword: contraseña actual
+    ///   - newPassword: nueva contraseña
+    ///   - confirmPassword: confirmar la nueva contraseña
     func EditPass(currentPassword: String, newPassword: String, confirmPassword: String) {
         let url = URL(string: "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/passedit")
         
@@ -50,6 +56,7 @@ class EditPassword_ViewController: UIViewController {
         }
     }
     
+    /// Al pulsar el botón se llama al método que realiza la petición para editar la contraseña.
     @IBAction func EditPassFunc(_ sender: Any) {
         EditPass(currentPassword: currentPass.text!, newPassword: newPass.text! , confirmPassword: newPassVerify.text!)
     }

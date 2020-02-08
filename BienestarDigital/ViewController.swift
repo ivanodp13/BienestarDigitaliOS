@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-//import SwiftyJSON
+import UserNotifications
 
 var global_app_name = ""
 var global_app_icon = ""
@@ -24,18 +24,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var nameArray: Array<String> = []
     var useArray: Array<String> = []
     var iconURLArray: Array<String> = []
+    var maxTimeArray: Array<String> = []
+    var sUseArray: Array<String> = []
     
     var detailsTableViewController : UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
+            (autorizado, error) in
+            if autorizado {
+                print("Permiso concedido")
+            } else {
+                print("Permiso denegado")
+            }
+        }        
         downloadDataFromAPI()
-        
     }
     
+    
+    /// Realiza una petición al servidor a traves de la url que aparece abajo. Una vez recibidos los datos introduce los datos en arrays.
     func downloadDataFromAPI(){
-        
         let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/showAllAppUseToday"
         let user_token: String = UserDefaults.standard.value(forKey: "token") as! String
         let header = ["Authorization" : user_token]
@@ -47,20 +57,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let name = item["name"] as? String
                     let use = item["use"] as? String
                     let imageURL = item["icon"] as? String
+                    let sMaxUse = item["maxTime"] as? String
+                    let sUse = item["seconds"] as? String
                     self.nameArray.append((name)!)
                     self.useArray.append((use) ?? "0")
                     self.iconURLArray.append((imageURL)!)
+                    self.maxTimeArray.append((sMaxUse)!)
+                    self.sUseArray.append((sUse)!)
                 }
                 self.tableView.reloadData()
+                self.createNotification()
                 
             }
         }
     }
     
+    
+    /// Calcula el numero de filas que tendrá la tabla.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArray.count
     }
     
+    
+    /// Rellena cada una de las celdas con los datos que correspondan.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppCell", for: indexPath) as! AppTableViewCell
@@ -74,6 +93,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    
+    /// Guarda en una variable global los datos de la celda seleccionada.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let app_name = nameArray[indexPath.row]
         global_app_name = app_name
@@ -85,5 +106,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createNotification(){
+        var x = 0
+        for i in maxTimeArray {
+            print(i)
+            print("vs")
+            print(sUseArray[x])
+            
+            if (Int(i) ?? 0 > Int(sUseArray[x]) ?? 0) {
+                let contenido = UNMutableNotificationContent()
+                contenido.title = "¡Cuidado!"
+                contenido.body = "Has superado el tiempo de uso para "+nameArray[x]
+                contenido.sound = UNNotificationSound.default
+                contenido.badge = 3
+                
+                let disparador = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                
+                let peticion = UNNotificationRequest(identifier: "miNotificacion", content: contenido, trigger: disparador)
+                
+                UNUserNotificationCenter.current().add(peticion, withCompletionHandler: nil)
+            }
+            /*if(Int(i) ?? 0) < (useArray[x]){
+            }*/
+        x += 1
+        }
     }
 }

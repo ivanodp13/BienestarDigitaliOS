@@ -344,6 +344,7 @@
                         <segue destination="P16-O7-al3" kind="show" identifier="LoginSegue" id="u2X-XH-xAD"/>
                         <segue destination="Lfp-b1-ERI" kind="show" identifier="loginToRegisterSegue" id="gaC-yS-dRT"/>
                         <segue destination="nZK-xA-7QI" kind="show" identifier="loginToPassRecovery" id="vPf-u1-nLW"/>
+                        <segue destination="P16-O7-al3" kind="show" identifier="autoLoginSegue" animates="NO" id="wf1-QG-UYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1222,7 +1223,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u2X-XH-xAD"/>
-        <segue reference="UDJ-ld-ltU"/>
+        <segue reference="wf1-QG-UYM"/>
+        <segue reference="2gH-Jr-Gjp"/>
     </inferredMetricsTieBreakers>
 </document>

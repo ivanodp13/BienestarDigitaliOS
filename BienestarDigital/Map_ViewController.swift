@@ -22,6 +22,8 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
      let locationManager = CLLocationManager()
     var currentCoordinate: CLLocationCoordinate2D?
     
+    
+    /// Obtiene la localización actual.
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadDataFromAPI()
@@ -34,6 +36,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
         
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
+        
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -48,6 +51,8 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showsScale = true
     }
     
+    
+    /// Muestra en el mapa la localización del usuario.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
@@ -61,6 +66,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
+    /// Petición para obtener las localizaciones de uso del servidor.
     func downloadDataFromAPI(){
         
         let url = "http://localhost:8888/laravel-ivanodp/BienestarDigital/public/index.php/api/showUseLocations"
@@ -84,6 +90,8 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    
+    /// Crea y muestra en el mapa las localizaciones de uso.
     func createAnnotations(/*locations: [[String: Any]]*/){
         var locations = 0
         let latitudes = latitudeArray.count
